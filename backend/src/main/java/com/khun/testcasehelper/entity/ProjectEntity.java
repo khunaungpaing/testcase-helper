@@ -6,23 +6,26 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
-// Projects entity
 @Entity
-@Table(name = "projects")
 @Data
 @NoArgsConstructor
-public class Project {
+@Table(name = "projects")
+public class ProjectEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "project_seq")
-    @SequenceGenerator(name = "project_seq", sequenceName = "project_id_seq", allocationSize = 1)
+    @SequenceGenerator(name = "project_seq", sequenceName = "projects_project_id_seq", allocationSize = 1)
+    @Column(name = "project_id")
     private Long projectId;
 
-    @Column(nullable = false)
+    @Column(name = "name", length = 255, nullable = false)
     private String name;
 
+    @Column(name = "description", columnDefinition = "TEXT")
     private String description;
 
+    @Column(name = "start_date")
     private LocalDate startDate;
 
+    @Column(name = "end_date")
     private LocalDate endDate;
 }

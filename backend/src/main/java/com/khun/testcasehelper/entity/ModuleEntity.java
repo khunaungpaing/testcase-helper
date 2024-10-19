@@ -4,23 +4,24 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-// Modules entity
 @Entity
-@Table(name = "modules")
 @Data
 @NoArgsConstructor
-public class Module {
+@Table(name = "modules")
+public class ModuleEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "module_seq")
-    @SequenceGenerator(name = "module_seq", sequenceName = "module_id_seq", allocationSize = 1)
+    @SequenceGenerator(name = "module_seq", sequenceName = "modules_module_id_seq", allocationSize = 1)
+    @Column(name = "module_id")
     private Long moduleId;
 
-    @Column(nullable = false)
+    @Column(name = "name", length = 255, nullable = false)
     private String name;
 
+    @Column(name = "description", columnDefinition = "TEXT")
     private String description;
 
     @ManyToOne
     @JoinColumn(name = "version_id")
-    private ProjectVersion version;
+    private ProjectVersionEntity version;
 }

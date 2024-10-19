@@ -4,22 +4,18 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-// Test Case Tags join table
 @Entity
-@Table(name = "test_case_tags")
 @Data
 @NoArgsConstructor
-public class TestCaseTag {
-    @EmbeddedId
-    private TestCaseTagId id;
-
+@Table(name = "test_case_tags")
+public class TestCaseTagEntity {
+    @Id
     @ManyToOne
-    @MapsId("testCaseId")
     @JoinColumn(name = "test_case_id")
-    private TestCase testCase;
+    private TestCaseEntity testCase;
 
+    @Id
     @ManyToOne
-    @MapsId("tagId")
     @JoinColumn(name = "tag_id")
-    private Tag tag;
+    private TagEntity tag;
 }

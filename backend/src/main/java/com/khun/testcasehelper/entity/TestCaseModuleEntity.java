@@ -4,22 +4,18 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-// Test Case Modules join table
 @Entity
-@Table(name = "test_case_modules")
 @Data
 @NoArgsConstructor
-public class TestCaseModule {
-    @EmbeddedId
-    private TestCaseModuleId id;
-
+@Table(name = "test_case_modules")
+public class TestCaseModuleEntity {
+    @Id
     @ManyToOne
-    @MapsId("testCaseId")
     @JoinColumn(name = "test_case_id")
-    private TestCase testCase;
+    private TestCaseEntity testCase;
 
+    @Id
     @ManyToOne
-    @MapsId("moduleId")
     @JoinColumn(name = "module_id")
-    private Module module;
+    private ModuleEntity module;
 }

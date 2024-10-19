@@ -1,10 +1,14 @@
+# OS specific files
 .DS_Store
+Thumbs.db
+
 HELP.md
-.gradle
+
+# Gradle files
+.gradle/
 build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
+!igradle/wrapper/gradle-wrapper.jar  # Track this for consistent Gradle version
+!gradle/wrapper/gradle-wrapper.properties  # Also track this
 
 ### STS ###
 .apt_generated
@@ -15,17 +19,13 @@ build/
 .springBeans
 .sts4-cache
 bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
 
 ### IntelliJ IDEA ###
-.idea
-*.iws
+.idea/
 *.iml
 *.ipr
+*.iws
 out/
-!**/src/main/**/out/
-!**/src/test/**/out/
 
 ### NetBeans ###
 /nbproject/private/
@@ -36,3 +36,16 @@ out/
 
 ### VS Code ###
 .vscode/
+
+# Log files
+*.log
+
+# Environment files
+.env
+
+# Java class files
+*.class
+
+# Ignore all build directories
+**/build/
+

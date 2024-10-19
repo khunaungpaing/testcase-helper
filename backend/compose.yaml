@@ -1,0 +1,58 @@
+services:
+  postgres:
+    image: postgres:13
+    container_name: testcase-helper-db
+    environment:
+      POSTGRES_USER: khun
+      POSTGRES_PASSWORD: khun
+      POSTGRES_DB: testcasehelper
+    ports:
+      - "5332:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - postgres_network
+
+volumes:
+  postgres_data:
+
+networks:
+  postgres_network:
+    driver: bridge
+
+
+
+#services:
+#  db:
+#    image: postgres:14.5
+#    container_name: testcase-helper-db
+#    environment:
+#      POSTGRES_USER: khun
+#      POSTGRES_PASSWORD: khun
+#      POSTGRES_DB: testcasehelper
+#      PGDATA: /data/postgres
+#    ports:
+#      - "5332:5432"
+#    networks:
+#      - db
+#    restart: unless-stopped
+
+#  testing-helper:
+#    container_name: testing-helper
+#    image: khunaungpaing/testing-helper
+#    environment:
+#      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/testing_helper
+#    ports:
+#      - "8080:8080"
+#    networks:
+#      - db
+#    depends_on:
+#      - db
+#    restart: unless-stopped
+#
+#networks:
+#  db:
+#    driver: bridge
+#
+#volumes:
+#  db:

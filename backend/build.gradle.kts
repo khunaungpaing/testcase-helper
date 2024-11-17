@@ -1,3 +1,4 @@
+
 plugins {
     java
     id("org.springframework.boot") version "3.3.4"
@@ -36,6 +37,7 @@ dependencies {
     testImplementation("org.testcontainers:junit-jupiter")
     testImplementation("org.testcontainers:postgresql")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    implementation ("org.springframework.boot:spring-boot-starter-mail")
 }
 
 tasks.withType<Test> {

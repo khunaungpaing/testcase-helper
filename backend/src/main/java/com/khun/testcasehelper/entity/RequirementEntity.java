@@ -12,8 +12,7 @@ public class RequirementEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "requirement_seq")
     @SequenceGenerator(name = "requirement_seq", sequenceName = "requirements_requirement_id_seq", allocationSize = 1)
-    @Column(name = "requirement_id")
-    private Long requirementId;
+    private Long id;
 
     @Column(name = "title", length = 255, nullable = false)
     private String title;

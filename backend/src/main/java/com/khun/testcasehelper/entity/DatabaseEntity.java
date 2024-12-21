@@ -12,8 +12,7 @@ public class DatabaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "database_seq")
     @SequenceGenerator(name = "database_seq", sequenceName = "databases_database_id_seq", allocationSize = 1)
-    @Column(name = "database_id")
-    private Long databaseId;
+    private Long id;
 
     @Column(name = "name", length = 255, nullable = false)
     private String name;

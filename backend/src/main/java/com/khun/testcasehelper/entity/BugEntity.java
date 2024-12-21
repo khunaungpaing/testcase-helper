@@ -14,8 +14,7 @@ public class BugEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "bug_seq")
     @SequenceGenerator(name = "bug_seq", sequenceName = "bugs_bug_id_seq", allocationSize = 1)
-    @Column(name = "bug_id")
-    private Long bugId;
+    private Long id;
 
     @Column(name = "title", length = 255, nullable = false)
     private String title;

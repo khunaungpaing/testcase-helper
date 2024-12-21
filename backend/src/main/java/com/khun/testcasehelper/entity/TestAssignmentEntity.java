@@ -14,8 +14,7 @@ public class TestAssignmentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "assignment_seq")
     @SequenceGenerator(name = "assignment_seq", sequenceName = "test_assignments_assignment_id_seq", allocationSize = 1)
-    @Column(name = "assignment_id")
-    private Long assignmentId;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "assigned_to")

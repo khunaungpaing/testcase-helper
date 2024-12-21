@@ -14,8 +14,7 @@ public class ProjectEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "project_seq")
     @SequenceGenerator(name = "project_seq", sequenceName = "projects_project_id_seq", allocationSize = 1)
-    @Column(name = "project_id")
-    private Long projectId;
+    private Long id;
 
     @Column(name = "name", length = 255, nullable = false)
     private String name;

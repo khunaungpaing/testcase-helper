@@ -12,8 +12,7 @@ public class TestExecutionEvidenceEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "evidence_seq")
     @SequenceGenerator(name = "evidence_seq", sequenceName = "test_execution_evidence_evidence_id_seq", allocationSize = 1)
-    @Column(name = "evidence_id")
-    private Long evidenceId;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "execution_id", nullable = false)

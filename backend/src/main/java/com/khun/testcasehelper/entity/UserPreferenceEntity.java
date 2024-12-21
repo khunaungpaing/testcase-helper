@@ -10,6 +10,10 @@ import lombok.NoArgsConstructor;
 @Table(name = "user_preferences")
 public class UserPreferenceEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_preference_seq")
+    @SequenceGenerator(name = "user_preference_seq", sequenceName = "user_preference_id_seq", allocationSize = 1)
+    private Long id;
+
     @OneToOne
     @JoinColumn(name = "user_id")
     private UserEntity user;

@@ -14,8 +14,7 @@ public class TestCaseCommentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "comment_seq")
     @SequenceGenerator(name = "comment_seq", sequenceName = "test_case_comments_comment_id_seq", allocationSize = 1)
-    @Column(name = "comment_id")
-    private Long commentId;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "test_case_id", nullable = false)

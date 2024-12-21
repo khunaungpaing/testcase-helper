@@ -15,8 +15,7 @@ public class TestCaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "test_case_seq")
     @SequenceGenerator(name = "test_case_seq", sequenceName = "test_cases_test_case_id_seq", allocationSize = 1)
-    @Column(name = "test_case_id")
-    private Long testCaseId;
+    private Long id;
 
     @Column(name = "title", length = 255, nullable = false)
     private String title;

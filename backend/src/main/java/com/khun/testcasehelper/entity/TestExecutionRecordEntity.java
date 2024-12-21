@@ -12,10 +12,9 @@ import java.time.LocalDate;
 @Table(name = "test_execution_records")
 public class TestExecutionRecordEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "execution_seq")
-    @SequenceGenerator(name = "execution_seq", sequenceName = "test_execution_records_execution_id_seq", allocationSize = 1)
-    @Column(name = "execution_id")
-    private Long executionId;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "execution_record_seq")
+    @SequenceGenerator(name = "execution_record_seq", sequenceName = "test_execution_records_execution_id_seq", allocationSize = 1)
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "assignment_id")

@@ -14,8 +14,7 @@ public class ProjectVersionEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "version_seq")
     @SequenceGenerator(name = "version_seq", sequenceName = "project_versions_version_id_seq", allocationSize = 1)
-    @Column(name = "version_id")
-    private Long versionId;
+    private Long id;
 
     @Column(name = "version_number", length = 50, nullable = false)
     private String versionNumber;

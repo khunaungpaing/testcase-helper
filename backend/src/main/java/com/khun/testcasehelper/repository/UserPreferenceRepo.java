@@ -5,6 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.khun.testcasehelper.entity.UserPreferenceEntity;
 
 @Repository
-public interface UserPreferenceRepo extends  JpaRepository<UserPreferenceEntity, Long> {
-
+public interface UserPreferenceRepo extends JpaRepository<UserPreferenceEntity, Long> {
 }

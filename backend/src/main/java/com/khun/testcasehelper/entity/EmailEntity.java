@@ -14,8 +14,7 @@ public class EmailEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "email_seq")
     @SequenceGenerator(name = "email_seq", sequenceName = "emails_email_id_seq", allocationSize = 1)
-    @Column(name = "email_id")
-    private Long emailId;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "recipient_id")

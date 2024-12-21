@@ -12,8 +12,7 @@ public class ModuleEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "module_seq")
     @SequenceGenerator(name = "module_seq", sequenceName = "modules_module_id_seq", allocationSize = 1)
-    @Column(name = "module_id")
-    private Long moduleId;
+    private Long id;
 
     @Column(name = "name", length = 255, nullable = false)
     private String name;

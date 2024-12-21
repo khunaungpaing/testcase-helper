@@ -12,8 +12,7 @@ public class EnvironmentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "environment_seq")
     @SequenceGenerator(name = "environment_seq", sequenceName = "environments_environment_id_seq", allocationSize = 1)
-    @Column(name = "environment_id")
-    private Long environmentId;
+    private Long id;
 
     @Column(name = "name", length = 255, nullable = false)
     private String name;

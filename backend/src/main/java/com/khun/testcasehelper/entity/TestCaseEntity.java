@@ -1,11 +1,8 @@
 package com.khun.testcasehelper.entity;
 
 import jakarta.persistence.*;
-import jdk.jfr.Timestamp;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.time.LocalDateTime;
 
 @Entity
 @Data

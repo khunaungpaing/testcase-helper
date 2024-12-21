@@ -33,12 +33,12 @@ public class TestCaseCommentEntity {
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt = LocalDateTime.now();
 
-    @Column(name = "attachment_filename", length = 255)
+    @Column(name = "attachment_filename")
     private String attachmentFilename;
 
     @Column(name = "attachment_type", length = 50)
     private String attachmentType;
 
-    @Column(name = "attachment_path", length = 255)
+    @Column(name = "attachment_path")
     private String attachmentPath;
 }

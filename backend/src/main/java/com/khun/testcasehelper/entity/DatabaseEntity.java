@@ -14,7 +14,7 @@ public class DatabaseEntity {
     @SequenceGenerator(name = "database_seq", sequenceName = "databases_database_id_seq", allocationSize = 1)
     private Long id;
 
-    @Column(name = "name", length = 255, nullable = false)
+    @Column(name = "name", nullable = false)
     private String name;
 
     @Column(name = "version", length = 50)

@@ -3,6 +3,7 @@ package com.khun.testcasehelper.service.serviceImplement;
 import com.khun.testcasehelper.service.EmailSenderService;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.mail.SimpleMailMessage;
@@ -13,12 +14,10 @@ import org.springframework.stereotype.Component;
 import java.io.File;
 
 @Component
+@RequiredArgsConstructor
 public class EmailSenderServiceImpl implements EmailSenderService {
 
-
-
-    @Autowired
-    private JavaMailSender emailSender;
+    private final JavaMailSender emailSender;
 
     //Send Message with no attachment
 

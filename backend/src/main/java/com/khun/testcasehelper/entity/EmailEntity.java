@@ -26,7 +26,7 @@ public class EmailEntity {
     @Column(name = "email_type", length = 50, nullable = false)
     private String emailType;
 
-    @Column(name = "subject", length = 255, nullable = false)
+    @Column(name = "subject", nullable = false)
     private String subject;
 
     @Column(name = "body", nullable = false)

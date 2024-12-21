@@ -14,7 +14,7 @@ public class EnvironmentEntity {
     @SequenceGenerator(name = "environment_seq", sequenceName = "environments_environment_id_seq", allocationSize = 1)
     private Long id;
 
-    @Column(name = "name", length = 255, nullable = false)
+    @Column(name = "name", nullable = false)
     private String name;
 
     @Column(name = "description", columnDefinition = "TEXT")

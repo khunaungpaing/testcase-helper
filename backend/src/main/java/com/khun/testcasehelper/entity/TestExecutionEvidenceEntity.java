@@ -18,7 +18,7 @@ public class TestExecutionEvidenceEntity {
     @JoinColumn(name = "execution_id", nullable = false)
     private TestExecutionRecordEntity execution;
 
-    @Column(name = "file_name", length = 255, nullable = false)
+    @Column(name = "file_name", nullable = false)
     private String fileName;
 
     @Column(name = "file_type", length = 50, nullable = false)

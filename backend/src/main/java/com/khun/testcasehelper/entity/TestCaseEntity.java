@@ -14,7 +14,7 @@ public class TestCaseEntity {
     @SequenceGenerator(name = "test_case_seq", sequenceName = "test_cases_test_case_id_seq", allocationSize = 1)
     private Long id;
 
-    @Column(name = "title", length = 255, nullable = false)
+    @Column(name = "title", nullable = false)
     private String title;
 
     @Column(name = "description", columnDefinition = "TEXT")
